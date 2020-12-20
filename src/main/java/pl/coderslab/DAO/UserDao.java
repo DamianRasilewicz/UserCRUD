@@ -3,11 +3,8 @@ package pl.coderslab.DAO;
 import org.mindrot.jbcrypt.BCrypt;
 import pl.coderslab.utils.DbUtil;
 import pl.coderslab.entity.User;
-
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class UserDao {
 
@@ -94,26 +91,6 @@ public class UserDao {
         statement.executeUpdate();
     }
 
-//    private static final String FINDALL_QUERY = "SELECT * from workshop2.users;";
-//
-//    public User[] findALL () throws SQLException {
-//        User[] userList = new User[0];
-//        Connection conn = DbUtil.getConnection();
-//        PreparedStatement statement =
-//                conn.prepareStatement(FINDALL_QUERY);
-//        ResultSet resultSet = statement.executeQuery();
-//        while (resultSet.next()) {
-//            User user = new User();
-//            int id = resultSet.getInt("id");
-//            String username = resultSet.getString("username");
-//            String email = resultSet.getString("email");
-//            user.setId(id);
-//            user.setUserName(username);
-//            user.setEmail(email);
-//            userList = addToArray(user, userList);
-//        }
-//
-//        return userList;
 private static final String FINDALL_QUERY = "SELECT id, username, email FROM workshop2.users";
 
     public User[] findALL () throws SQLException {
@@ -130,7 +107,6 @@ private static final String FINDALL_QUERY = "SELECT id, username, email FROM wor
             user.setAllParameters(id, username, email);
             userList = addToArray(user, userList);
         }
-//        System.out.println(Arrays.toString(userList));
         return userList;
     }
 
