@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/user/list")
+@WebServlet("/")
 public class UserList extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -20,7 +20,7 @@ public class UserList extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        getServletContext().getRequestDispatcher("/users/list.jsp")
+        getServletContext().getRequestDispatcher("/users/index.jsp")
                 .forward(request, response);
     }
 }
