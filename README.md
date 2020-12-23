@@ -1,4 +1,4 @@
-﻿# JEE-User-CRUD
+﻿# UserCRUD
 It's the third Java workshop which I've made on Java Developer Web course in Coders Lab. JEE-User-CRUD it's a Users Database uses Java, Web Servlets, MySQL database and JSP.
 
 ## Features
